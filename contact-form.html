@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ignitix</title>
+    <meta name="description" content="Get in touch with Ignitix. Contact our team for marketing solutions, software development, and growth strategies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ignite: hsl(19, 96%, 60%);
+            --deep-charcoal: hsl(225, 25%, 11%);
+            --electric-blue: hsl(243, 75%, 59%);
+            --slate-gray: hsl(215, 16%, 32%);
+            --white: hsl(0, 0%, 100%);
+            --gray-50: hsl(210, 40%, 98%);
+            --gray-100: hsl(214.3, 31.8%, 91.4%);
+            --gray-300: hsl(212.7, 26.8%, 83.9%);
+            --gray-400: hsl(215.4, 16.3%, 56.9%);
+            --gray-500: hsl(215.3, 16.3%, 46.9%);
+            --gray-600: hsl(215.3, 19.3%, 34.5%);
+            --success: hsl(142.1, 76.2%, 36.3%);
+            --error: hsl(0, 84.2%, 60.2%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--deep-charcoal);
+            background: var(--gray-50);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--ignite) 0%, var(--electric-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            color: var(--slate-gray);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--ignite);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .contact-info {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--ignite) 0%, var(--electric-blue) 100%);
+            border-radius: 16px;
+            color: white;
+            height: fit-content;
+        }
+
+        .contact-info h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-text h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-text p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            margin-bottom: 32px;
+        }
+
+        .form-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--deep-charcoal);
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            color: var(--slate-gray);
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--deep-charcoal);
+            font-size: 14px;
+        }
+
+        .required {
+            color: var(--error);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--ignite);
+            box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+        }
+
+        .form-input.error,
+        .form-select.error,
+        .form-textarea.error {
+            border-color: var(--error);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .character-count {
+            text-align: right;
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--ignite);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .form-submit:hover {
+            background: hsl(19, 96%, 55%);
+            transform: translateY(-1px);
+        }
+
+        .form-submit:disabled {
+            background: var(--gray-400);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: var(--success);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+
+        .success-message i {
+            font-size: 20px;
+        }
+
+        /* Form Tips */
+        .form-tips {
+            background: var(--gray-50);
+            border-left: 4px solid var(--ignite);
+            padding: 20px;
+            margin-top: 24px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .form-tips h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--deep-charcoal);
+        }
+
+        .form-tips ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .form-tips li {
+            color: var(--slate-gray);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-tips li i {
+            color: var(--ignite);
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 24px;
+            }
+
+            .contact-info h1 {
+                font-size: 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .back-link,
+            .social-links,
+            .form-submit {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ignitix</div>
+                <a href="index.html" class="back-link" onclick="history.back()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-content">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h1>Let's Start a Conversation</h1>
+                <p>Ready to transform your marketing strategy? We're here to help you ignite your brand's potential.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>ignitix.digital@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+91 9601945583</p>
+                            <p>+91 9601945583</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Office</h3>
+                            <p>Gujrat, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Business Hours</h3>
+                            <p>Mon-Fri: 9AM-6PM IST</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/company/ignitix-marketing-it" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Message sent successfully!</strong><br>
+                        We'll get back to you within 24 hours.
+                    </div>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">
+                                First Name <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                class="form-input" 
+                                placeholder="John"
+                                required
+                                maxlength="50"
+                            >
+                            <div class="error-message" id="firstNameError">Please enter your first name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="lastName">
+                                Last Name <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                class="form-input" 
+                                placeholder="Doe"
+                                required
+                                maxlength="50"
+                            >
+                            <div class="error-message" id="lastNameError">Please enter your last name</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="john@company.com"
+                                required
+                            >
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">
+                                Phone Number
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="+1 (555) 123-4567"
+                            >
+                            <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="company">
+                                Company <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company" 
+                                class="form-input" 
+                                placeholder="Your Company Name"
+                                required
+                                maxlength="100"
+                            >
+                            <div class="error-message" id="companyError">Please enter your company name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="jobTitle">
+                                Job Title
+                            </label>
+                            <input 
+                                type="text" 
+                                id="jobTitle" 
+                                name="jobTitle" 
+                                class="form-input" 
+                                placeholder="Marketing Manager"
+                                maxlength="100"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="service">
+                            Service of Interest <span class="required">*</span>
+                        </label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Select a service</option>
+                            <option value="custom-web-apps">Custom Web Apps</option>
+                            <option value="marketing-automation">Marketing Automation</option>
+                            <option value="crm-integrations">CRM Integrations</option>
+                            <option value="campaign-strategy">Campaign Strategy & Launch</option>
+                            <option value="seo-sem">SEO & SEM</option>
+                            <option value="social-media">Social Media Engagement</option>
+                            <option value="funnel-optimization">Funnel Optimization</option>
+                            <option value="data-insights">Data-Driven Insights</option>
+                            <option value="conversion-tracking">Conversion Tracking</option>
+                            <option value="full-package">Complete Marketing Package</option>
+                            <option value="consultation">Free Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="serviceError">Please select a service</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="budget">
+                            Project Budget (Optional)
+                        </label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range</option>
+                            <option value="under-10k">Under $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="over-100k">Over $100,000</option>
+                            <option value="discuss">Let's discuss</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">
+                            Message <span class="required">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            placeholder="Tell us about your project, goals, challenges, and how we can help..."
+                            required
+                            maxlength="1000"
+                        ></textarea>
+                        <div class="character-count">
+                            <span id="charCount">0</span>/1000 characters
+                        </div>
+                        <div class="error-message" id="messageError">Please enter your message (minimum 20 characters)</div>
+                    </div>
+
+                    <button type="submit" class="form-submit" id="submitBtn">
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                        <i class="fas fa-paper-plane" id="submitIcon"></i>
+                        <span id="submitText">Send Message</span>
+                    </button>
+                </form>
+
+                <div class="form-tips">
+                    <h4>What happens next?</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> We'll review your message within 24 hours</li>
+                        <li><i class="fas fa-check"></i> Our team will contact you to discuss your needs</li>
+                        <li><i class="fas fa-check"></i> We'll provide a customized proposal</li>
+                        <li><i class="fas fa-check"></i> Schedule a free consultation call</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Form validation and submission
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const submitIcon = document.getElementById('submitIcon');
+        const submitText = document.getElementById('submitText');
+        const successMessage = document.getElementById('successMessage');
+        const messageTextarea = document.getElementById('message');
+        const charCount = document.getElementById('charCount');
+
+        // Character counter for message field
+        messageTextarea.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            
+            if (count > 950) {
+                charCount.style.color = 'var(--error)';
+            } else if (count > 800) {
+                charCount.style.color = 'var(--ignite)';
+            } else {
+                charCount.style.color = 'var(--gray-500)';
+            }
+        });
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        // Phone validation regex (flexible format)
+        const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
+
+        // Validation functions
+        function validateField(field, errorElement, validationFn, errorMessage) {
+            const isValid = validationFn(field.value);
+            
+            if (isValid) {
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+                return true;
+            } else {
+                field.classList.add('error');
+                errorElement.textContent = errorMessage;
+                errorElement.classList.add('show');
+                return false;
+            }
+        }
+
+        function validateRequired(value) {
+            return value.trim().length > 0;
+        }
+
+        function validateEmail(value) {
+            return value.trim().length > 0 && emailRegex.test(value);
+        }
+
+        function validatePhone(value) {
+            return value.trim().length === 0 || phoneRegex.test(value);
+        }
+
+        function validateMessage(value) {
+            return value.trim().length >= 20;
+        }
+
+        // Real-time validation
+        const validationRules = [
+            {
+                field: document.getElementById('firstName'),
+                error: document.getElementById('firstNameError'),
+                validator: validateRequired,
+                message: 'Please enter your first name'
+            },
+            {
+                field: document.getElementById('lastName'),
+                error: document.getElementById('lastNameError'),
+                validator: validateRequired,
+                message: 'Please enter your last name'
+            },
+            {
+                field: document.getElementById('email'),
+                error: document.getElementById('emailError'),
+                validator: validateEmail,
+                message: 'Please enter a valid email address'
+            },
+            {
+                field: document.getElementById('phone'),
+                error: document.getElementById('phoneError'),
+                validator: validatePhone,
+                message: 'Please enter a valid phone number'
+            },
+            {
+                field: document.getElementById('company'),
+                error: document.getElementById('companyError'),
+                validator: validateRequired,
+                message: 'Please enter your company name'
+            },
+            {
+                field: document.getElementById('service'),
+                error: document.getElementById('serviceError'),
+                validator: validateRequired,
+                message: 'Please select a service'
+            },
+            {
+                field: document.getElementById('message'),
+                error: document.getElementById('messageError'),
+                validator: validateMessage,
+                message: 'Please enter your message (minimum 20 characters)'
+            }
+        ];
+
+        // Add event listeners for real-time validation
+        validationRules.forEach(rule => {
+            rule.field.addEventListener('blur', () => {
+                validateField(rule.field, rule.error, rule.validator, rule.message);
+            });
+
+            rule.field.addEventListener('input', () => {
+                if (rule.field.classList.contains('error')) {
+                    validateField(rule.field, rule.error, rule.validator, rule.message);
+                }
+            });
+        });
+
+        // Form submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            let isValid = true;
+            validationRules.forEach(rule => {
+                const fieldValid = validateField(rule.field, rule.error, rule.validator, rule.message);
+                if (!fieldValid) isValid = false;
+            });
+
+            if (!isValid) {
+                // Focus on first error field
+                const firstError = document.querySelector('.form-input.error, .form-select.error, .form-textarea.error');
+                if (firstError) {
+                    firstError.focus();
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            loadingSpinner.style.display = 'block';
+            submitIcon.style.display = 'none';
+            submitText.textContent = 'Sending...';
+
+            try {
+                // Simulate form submission (replace with actual API call)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                // Show success message
+                successMessage.classList.add('show');
+                form.reset();
+                charCount.textContent = '0';
+                charCount.style.color = 'var(--gray-500)';
+                
+                // Reset any error states
+                document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(field => {
+                    field.classList.remove('error');
+                });
+                document.querySelectorAll('.error-message').forEach(error => {
+                    error.classList.remove('show');
+                });
+
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Hide success message after 10 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 10000);
+
+            } catch (error) {
+                alert('There was an error sending your message. Please try again or contact us directly.');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                loadingSpinner.style.display = 'none';
+                submitIcon.style.display = 'inline';
+                submitText.textContent = 'Send Message';
+            }
+        });
+
+        // Auto-resize textarea
+        messageTextarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // Prevent form submission on Enter key (except in textarea)
+        form.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+            }
+        });
+
+        // Format phone number as user types
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formattedValue = '';
+            
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    formattedValue = value;
+                } else if (value.length <= 6) {
+                    formattedValue = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    formattedValue = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            
+            e.target.value = formattedValue;
+        });
+
+        // Analytics tracking (replace with your analytics code)
+        function trackFormSubmission() {
+            // Example: Google Analytics event tracking
+            // gtag('event', 'form_submission', {
+            //     event_category: 'contact',
+            //     event_label: 'contact_form'
+            // });
+            
+            console.log('Form submission tracked');
+        }
+    </script>
+</body>
+</html>
